@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My web page!</title>
+   <style>
+       #picture {
+           position: relative;
+           width:500px;
+           left: 100px;
+       }
+       #picture img {
+           width: 500px;
+           margin:0;
+           padding:0;
+       }
+      #note {
+            text-align: right;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 200px;
+            top: 30px;
+            border:2px solid black;
+            display: none;
+           
+      }
+      #picture:hover #note
+      {
+        display: block;
+      }
+      #next
+      {
+          position: relative;
+          top: 40px;
+          margin: 0px;
+          padding:0px;
+      }
+      #previous
+      {
+       
+        position: relative;
+        left: 400px;
+        top: 40px;
+        margin: 0px;
+        padding:0px;
+      }
+      #picture a 
+      {
+
+          position: absolute;
+          border:1px solid #333333;
+          height: 337px;
+          width:20%;
+      }
+   </style>
+ 
+</head>
+<body>
+    <h1 style="text-align: center;">Earth is partationed</h1>
+    <div id="picture">
+        <a href="links0.html" id="next">next</a>
+        <a href="links0.html" id="previous">previous</a>
+        <img src="earth.png" alt="earth">
+        <div id="note">
+            this is moon
+        </div>
+    </div>
+</body>
+</html>
