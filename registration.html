@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .cap{
+          font-weight: bold;
+        }
+        div{
+            display: block;
+            margin-left: 120px;
+            margin-bottom: 30px;
+        }
+        #name{
+            margin-right: 20px;
+        }
+        #operating,#mini{
+            position: relative;
+            right:60px
+        }
+         #mini {
+            display: block;
+        } 
+        textarea{
+            position: relative;
+            left: 50px;
+            top: -15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p>Please fill the form below to register for our site. Fields with bold labels are required.</p>
+    <form action="/register" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="name" class="cap" id="name">Name</label>
+        <input type="text" name="name">
+    </div>
+    <div >
+        <label for="gender" class="cap">Gender</label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender" >female
+    </div>
+    <div >
+        <label for="os" class="cap" id="operating">Operating System</label>
+        <select name="os">
+            <option value="windows">windows</option>
+            <option value="linux">linux</option>
+            <option value="mac">mac os</option>
+        </select>
+    </div>
+    <div>
+        <label for="toy">Toy</label>
+        <input type="checkbox" name="toy">Digital Camera
+        <input type="checkbox" name="toy">MP3 Player
+        <input type="checkbox" name="toy">Wireless LAN
+    </div>
+    <div>
+        <label for="portrait">Portrait</label>
+        <input type="file" name="portrait">
+    </div>
+    <div>
+        <label for="mini-biography" id="mini">Mini-Biography</label>
+         <textarea name="mini-biography"  cols="50" rows="6"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="register">
+    </div>
+    </form>
+</body>
+</html>
