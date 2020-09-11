@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My wed page!</title>
+    <style>
+        progress{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+       progress::-webkit-progress-bar{
+           height: 10px;
+           background-color: aqua;
+           box-shadow: 0 2px 3px rgb(0,0,0,0.2) inset;
+           border-radius: 5px;
+       }
+       progress::-webkit-progress-value{
+           background-color: chartreuse;
+           border-radius: 5px;
+       }
+    </style>
+</head>
+<body>
+    <p >progress task 1:
+        <progress value="25"  max="100" ></progress><br>
+    </p>
+    <p>
+        progress task 2:
+        <progress value="50"  max="100"></progress><br>
+    </p>
+    <p>
+        progress task 3:
+        <progress value="75"  max="100"></progress>
+    </p>
+</body>
+</html>
