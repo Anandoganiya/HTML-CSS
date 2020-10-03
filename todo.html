@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            //By defult submit button is disabled;
+            document.querySelector('#submit').disabled = true;
+            
+            document.querySelector('#t-task').onkeyup = function(){
+                if(document.querySelector('#t-task').value.length > 0 ){
+                document.querySelector('#submit').disabled = false;
+                }else{
+                    document.querySelector('#submit').disabled = true;
+                }
+            }
+            
+            document.querySelector('form').onsubmit = function(){
+                
+
+                const  task = document.querySelector('#t-task').value;
+                console.log(task);
+
+               const li =  document.createElement('li');
+                li.innerHTML = task;
+                document.querySelector('#task').append(li);
+                
+                document.querySelector('#t-task').value = '';
+                
+                document.querySelector('#submit').disabled = true;
+
+                return false;
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>TODO</h1>
+    <ul id="task">
+    </ul>
+    <form >
+        <input type="text" id="t-task" placeholder="Enter task">
+        <input type="submit" id="submit">
+    </form>
+</body>
+</html>
