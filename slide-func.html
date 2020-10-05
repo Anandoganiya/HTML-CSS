@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery page</title>
+    <style>
+        #slide,#panel{
+            padding: 5px;
+            text-align: center;
+            background-color: grey;
+            color: black;
+            border: 2px solid black;
+            font-weight: bolder;
+        }
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="slide">click here for slide panel</div>
+    <div id="panel">HELLO WORLD</div>
+    
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+
+       $(function(){
+           $("#slide").click(function(){
+            $("#panel").slideToggle("slow");
+           });
+       });
+        
+
+    </script>
+</body>
+</html>
