@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery page</title>
+    
+</head>
+<body>
+    <ul id="editable">
+    </ul>
+    <form id="addelement">
+      <label>New list item: <input type="text" name="liContent"  size="60"> </label>
+      <input type="submit" value="Add item">
+    </form>
+    <p><a href="#" id="clearlist">clearall</a></p>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+
+      $(function(){
+        $("#clearlist").click(function(event){
+          event.preventDefault();
+          $("#editable").empty();
+        });
+
+        $("#addelement").submit(function(event){
+          event.preventDefault();
+          $("#editable").append("<li>" + $("#addelement input[name='liContent']").val() + "</li>");
+          $("#addelement input[name='liContent']").val("");
+        });
+
+        $(document).on('click', "#editable", function(){
+          $(this).remove();
+        });
+      });
+
+     
+
+    
+    </script>
+</body>
+</html>
