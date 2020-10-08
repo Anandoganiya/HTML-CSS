@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+     <script type="text/javascript" src="jquery.js"></script>
+     <style>
+         #container{
+             width: 400px;
+             height: 400px;
+             position: relative;
+             background-color:yellow;
+         }
+         #animate{
+             width:50px;
+             height: 50px;
+             position:absolute;
+             background-color:red;
+         }
+     </style>
+</head>
+<body>
+    <button onclick="Move()">click</button>
+   <div id="container">
+       <div id="animate"></div>
+   </div>
+    <script>
+
+        function Move(){
+            var elem = document.getElementById("animate");
+            var pos= 0;
+            var Myvar = setInterval(frame,5);
+         function frame(){    
+                if(pos == 350){
+                    clearInterval(Myvar);
+                }else{
+                    pos++
+                    elem.style.top =  pos + "px";
+                    elem.style.left = pos  +"px";
+                }
+            }        
+            
+        }
+    
+    </script>
+  
+</body>
+</html>
